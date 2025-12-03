@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aston Martin | Gino Spa - Concessionaria Ufficiale</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- ========================================
+         NAVBAR
+    ======================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand col-6 col-md-auto" href="#home">
+                <img class="d-block" src="img/logo-gino-luxury.png" alt="" width="auto" height="65">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offerta">OFFERTA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gamma">GAMMA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#timeless">TIMELESS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sedi">SEDI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leadModal" >
+                            RICHIEDI INFORMAZIONI ORA
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         SEZIONE HERO
+    ======================================== -->
+    <section class="hero-section" id="home">
+        <!-- Background -->
+        <img class="hero-img" src="img/aston-hero.jpg" alt="aston-martin">
+     
+        <!-- Overlay Gradient -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                    <div class="pills-container">
+                        <div class="pill">
+                            <div class="pill-icon"><img src="img/diamond.svg" alt="diamond"></div>
+                            <span class="pill-text">Eccellenza britannica</span>
+                        </div>
+                        <div class="pill">
+                            <div class="pill-icon"><img src="img/lightning.svg" alt="lightning"></div>
+                            <span class="pill-text">Potenza contemporanea</span>
+                        </div>
+                    </div>
+                    </div>
+                    <h1 data-aos="fade-up">L'arte della performance. <br> Vivi Aston Martin negli showroom di Milano e Verona</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        Scopri la gamma Aston Martin in pronta consegna e la gamma Aston Martin Timeless, il nostro esclusivo usato garantito.
+                    </p>
+                    <div>
+                        <a class="btn btn-hero btn-primary" data-bs-toggle="modal" data-bs-target="#leadModal">
+                            Richiedi Informazioni ora
+                        </a>
+                        <a class="btn btn-hero btn-outline-light" data-bs-toggle="modal" data-bs-target="#leadModal">
+                            Prenota Test Drive
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEZIONE OFFERTA SPECIALE
+    ======================================== -->
+    <section class="offer-section" id="offerta">
+        <div class="container">
+            <div class="offer-box g-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 order-md-1 order-2">
+                        <h2 class="offer-headline pe-md-5">Scopri la nostra gamma con
+                                            <span class="bold-headline"> TUTTO INCLUSO </span> grazie alle fomule
+                                            di Noleggio a Lungo Termine con                
+                        </h2>
+                        <div class="pills-container mb-5 pe-md-5">
+                            <div class="pill">
+                                <div class="pill-icon"><img src="img/check.svg" alt="check"></div>
+                                <span class="pill-text">Kasko</span>
+                            </div>
+                            <div class="pill">
+                                <div class="pill-icon"><img src="img/check.svg" alt="check"></div>
+                                <span class="pill-text">Immatricolazione</span>
+                            </div>
+                            <div class="pill">
+                                <div class="pill-icon"><img src="img/check.svg" alt="check"></div>
+                                <span class="pill-text">Soccorso stradale</span>
+                            </div>
+                            <div class="pill">
+                                <div class="pill-icon"><img src="img/check.svg" alt="check"></div>
+                                <span class="pill-text">Tutela legale</span>
+                            </div>
+                            <div class="pill">
+                                <div class="pill-icon"><img src="img/check.svg" alt="check"></div>
+                                <span class="pill-text">Manutenzione</span>
+                            </div>
+                        </div>
+                        <a class="btn btn-hero btn-primary" href="#vantage" role="button">
+                            Scopri <strong>VANTAGE</strong>
+                        </a>
+                        <a class="btn btn-hero btn-primary" href="#db12" role="button">
+                            Scopri <strong>DB12</strong>
+                        </a>
+                        <a class="btn btn-hero btn-primary" href="#dbx707" role="button">
+                            Scopri <strong>DBX707</strong>
+                        </a>              
+                    </div>
+                    <div class="col-lg-6 order-md-2 order-1">
+                        <img src="img/aston-promo.png" alt="Aston Martin" class="offer-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEZIONE GAMMA MODELLI
+    ======================================== -->
+    <section id="gamma" class="gamma-section ">
+        <div class="container">
+            <div class="text-center gamma-title mb-5">
+                <h2 class="section-title">La nostra Gamma Aston Martin</h2>
+                <p class="section-subtitle">Scopri l'eccellenza in ogni dettaglio</p>
+            </div>
+
+            <!-- Vantage -->
+            <div class="row mb-5 align-items-center" id="vantage">
+                <div class="col-lg-6 order-lg-1">
+                    <img src="img/aston-1.jpg" alt="Aston Martin Vantage" class="img-fluid rounded-3">
+                </div>
+                <div class="col-lg-6 order-lg-2 ps-md-5 px-3">
+                    <h3 class="model-title">Aston Martin Vantage</h3>
+                    <p class="model-description">Sportiva pura. Emozione immediata.</p>
+                    <hr/>
+                    <div class="model-price">
+                        <span class="price-label">Prezzo Gino €—</span>
+                        <div class="price-range mt-md-2">
+                            <span class="price-info">Listino €— •</span> <span class="price-save">Risparmi €—</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leadModal">
+                            Richiedi Informazioni
+                    </a>
+                </div>
+            </div>
+
+            <!-- DB12 -->
+            <div class="row mb-5 align-items-center" id="db12">
+                <div class="col-lg-6 order-lg-2">
+                    <img src="img/aston-2.jpg" alt="Aston Martin DB12" class="img-fluid rounded-3">
+                </div>
+                <div class="col-lg-6 order-lg-1 ps-md-5 px-3">
+                    <h3 class="model-title">Aston Martin DB12</h3>
+                    <p class="model-description">Super Tourer definitiva. Lusso e prestazioni.</p>
+                    <hr/>
+                    <div class="model-price">
+                        <span class="price-label">Prezzo Gino €—</span>
+                        <div class="price-range mt-md-2">
+                            <span class="price-info">Listino €— •</span> <span class="price-save">Risparmi €—</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leadModal">
+                            Richiedi Informazioni
+                    </a>
+                </div>
+            </div>
+
+            <!-- DBX707 -->
+            <div class="row mb-5 align-items-center" id="dbx707">
+                <div class="col-lg-6 order-lg-1 position-relative">
+                    <div class="pill-badge">
+                        <div class="pill-icon"><img src="img/coin.svg" alt="coin"></div>
+                        <span class="pill-text">Superbollo omaggio per 2 anni</span>
+                    </div>
+                    <img src="img/aston-3.jpg" alt="Aston Martin DBX707" class="img-fluid rounded-3">
+                </div>
+                <div class="col-lg-6 order-lg-2 ps-md-5 px-3">
+                    <h3 class="model-title">Aston Martin DBX707</h3>
+                    <p class="model-description">Il SUV più potente al mondo.</p>
+                    <hr/>
+                    <div class="model-price">
+                        <span class="price-label">Prezzo Gino €—</span>
+                        <div class="price-range mt-md-2">
+                            <span class="price-info">Listino €— •</span> <span class="price-save">Risparmi €—</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leadModal">
+                            Richiedi Informazioni
+                    </a>
+                </div>
+            </div>
+
+            <!-- Vanquish -->
+            <div class="row mb-5 align-items-center" id="vanquish">
+                <div class="col-lg-6 order-lg-2">
+                    <img src="img/aston-4.jpg" alt="Aston Martin Vanquish" class="img-fluid rounded-3">
+                </div>
+                <div class="col-lg-6 order-lg-1 ps-md-5 px-3">
+                    <h3 class="model-title">Aston Martin Vanquish</h3>
+                    <p class="model-description">Il vertice della gamma. Icona di eleganza.</p>
+                    <hr/>
+                    <div class="model-price ">
+                        <span class="price-label">Prezzo Gino €—</span>
+                        <div class="price-range mt-md-2">
+                            <span class="price-info">Listino €— •</span> <span class="price-save">Risparmi €—</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leadModal">
+                            Richiedi Informazioni
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================
+         SEZIONE TIMELESS 
+    ======================================== -->
+    <section class="timeless-section" id="timeless">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <img src="img/timeless.png" alt="timeless" class="timeless-logo">
+                    <h2 class="timeless-title">Aston Martin Timeless. L'usato certificato che non conosce il tempo</h2>
+                    <p class="timeless-body">
+                        Ogni vettura viene selezionata, controllata e perfezionata secondo
+                        gli standard più elevati della Casa madre, per offrirti un’esperienza impeccabile e autentica.
+                    </p>
+                    <ul class="timeless-features">
+                        <li>
+                            <img src="img/certified.svg" alt="certified" class="timeless-icon">
+                            <span>Certificazione ufficiale Aston Martin</span>
+                        </li>
+                        <li>
+                            <img src="img/stars.svg" alt="stars" class="timeless-icon">
+                            <span>Garanzia estesa</span>
+                        </li>
+                        <li>
+                            <img src="img/checklist.svg" alt="checklist" class="timeless-icon">
+                            <span>Controlli tecnici approfonditi</span>
+                        </li>
+                        <li>
+                            <img src="img/assistant.svg" alt="assistant" class="timeless-icon">
+                            <span>Assistenza dedicata</span>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leadModal">
+                            Esplora la selezione
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- ========================================
+         SEDI
+    ======================================== -->
+     <section id="sedi" class="sedi-section py-md-5 py-4">
+        <div class="container">
+            <div class="text-center mb-md-5 mb-3">
+                <h2 class="section-title">Le nostre sedi</h2>
+                <p class="section-subtitle">Scopri i nostri showroom Aston Martin</p>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6 mb-4 text-center">
+                    <div class="sede-card">
+
+                        <img class="sede-image" src="img/verona.jpg" alt="Verona">
+ 
+                        <div class="sede-content-wrapper">
+                            <h3 class="sede-title d-flex align-items-center justify-content-center gap-2">
+                                <img src="img/location.svg" alt="location" class="location-icon">
+                                Verona
+                            </h3>
+
+                            <p class="sede-address">Via Evangelista Torricelli 42</p>
+                            <p class="sede-address">37136 Verona – VR</p>
+                        
+                            <a class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#leadModal">
+                                Contattaci
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4 text-center">
+                    <div class="sede-card">
+
+                        <img class="sede-image" src="img/milano.jpg" alt="Milano">
+
+                        <div class="sede-content-wrapper">
+                            <h3 class="sede-title d-flex align-items-center justify-content-center gap-2">
+                                <img src="img/location.svg" alt="location" class="location-icon">
+                                Milano
+                            </h3>
+
+                            <p class="sede-address">Viale Certosa 187 angolo Via Tibullo</p>
+                            <p class="sede-address">320151 Milano – MI</p>
+                        
+                            <a class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#leadModal">
+                                Contattaci
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+            
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-copyright">
+                <img src="img/logo-gino-luxury.png" alt="logo-gino" >
+                <p class="mb-0">
+                    Gino S.p.A. | Via Torino, 234 - 12100 CUNEO - Italy | P.Iva e C.F. 00180290041
+                </p>
+                <div class="mb-3">
+                  <a data-bs-toggle="modal" data-bs-target="#leadModal">Privacy</a> |
+                  <a data-bs-toggle="modal" data-bs-target="#leadModal">Cookie Policy</a>
+                </div>
+                <span class="mb-0">
+                    © 2025 Concept & Design - 
+                </span>
+                <a href="https://www.amalthea.it/">Amalthea – Branding & Digital Marketing</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         MODALE
+    ======================================== -->
+   <div class="modal fade" id="leadModal" tabindex="-1" aria-labelledby="leadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leadModalLabel">Richiedi informazioni o prenota un test drive</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                   
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Vari -->
+    <script src="js/script.js"></script>
+
+
+
+    <!-- ========================================
+         CTA MOBILE
+    ======================================== -->
+    
+    <div class="mobile-cta-box">
+        <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#leadModal">
+            Richiedi informazioni
+        </a>
+    </div>
+
+   
+
+</body>
+</html>
