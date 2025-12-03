@@ -473,41 +473,7 @@
             display: none;
         }
 
-         /* ========================================
-           MODALE
-        ======================================== */
-        
-        /* Modal Styles */
-        .modal-content {
-            border-radius: 12px;
-            border: none;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-        }
-
-        .modal-header {
-            background-color: var(--dark);
-            color: #fff;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            padding: 0.8rem 1rem;
-        }
-
-        .modal-header .modal-title {
-            font-size: 1.4rem;
-            font-weight: 500;
-
-        }
-        
-        .modal-header .btn-close {
-            filter: brightness(0) invert(1);
-        }
-
-        .modal-body {
-            padding: 2rem;
-        }
-
-
-        
+     
         /* ========================================
            RESPONSIVE
         ======================================== */
@@ -657,6 +623,263 @@
         /* ========================================
            MODALE PERSONALIZZATA
         ======================================== */
+        /* Stati */
+        .field.is-error input {
+            border-color: #ef4444; /* red-500 */
+            border-width: 1px;
+        }
+        .field.is-valid input {
+            border-color: #16a34a; /* green-600 */
+            border-width: 1px;
+        }
         
+        /* Icona dentro l'INPUT, ancorata a .control */
+        .field .control { position: relative; }
+        .field .control .field-icon {
+        position: absolute;
+        right: 10px;
+        top: 54%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        pointer-events: none;
+        }
 
+        /* Messaggio d'errore sotto al campo */
+        .field .field-error {
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 1.3;
+        color: #dc2626;          /* red-600 */
+        display: none;
+        }
+        .field.is-error .field-error { display: block; }
+
+        /* ==== Fade-in on scroll (Tailwind-friendly) ==== */
+        .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity .6s ease-out, transform .6s ease-out;
+        will-change: opacity, transform;
+        }
+        .reveal.in-view {
+        opacity: 1;
+        transform: none;
+        }
+
+        /* Optional: quicker timing for smaller elements */
+        .reveal.fast {
+        transition-duration: .45s;
+        }
+
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+        .reveal,
+        .reveal.in-view {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+        }
+
+        /* Wrapper generato da HubSpot (nuovi form) */
+        #leadModal [data-hs-forms-root] * {
+        box-sizing: border-box;
+        font-family: var(--sans);
+        }
+
+        /* Contenitore del form */
+        #leadModal .hs-form {
+        width: 100%;
+        }
+
+        /* Layout campi: griglia responsiva */
+        #leadModal .hs-form fieldset {
+        border: 0;
+        padding: 0;
+        margin: 0 -0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        /* Ogni campo */
+        #leadModal .hs-form .hs-form-field {
+        width: 100%;
+        padding: 0 0.5rem;
+        margin-bottom: 0.75rem;
+        border-radius: 6px;
+        }
+
+        /* Su viewport >= 768px rispetta le colonne 2 di HubSpot */
+        @media (min-width: 768px) {
+        #leadModal .hs-form fieldset.form-columns-2 .hs-form-field {
+            width: 50%;
+        }
+        }
+
+        /* Label */
+        #leadModal .hs-form-field label {
+        display: block;
+        font-size: 0.75rem;   /* text-xs */
+        line-height: 1.3;
+        color: #3f3f46;       /* zinc-700 */
+        margin-bottom: 0.15rem;
+        }
+
+
+        /* Input / select / textarea (NO checkbox/radio) */
+        #leadModal .hs-input:not([type="checkbox"]):not([type="radio"]) {
+        width: 100%;
+        margin-top: 0.15rem;
+        padding: 0.55rem 0.9rem;       /* tipo py-2 px-3.5 */
+        border-radius: 2px;         /* pill come i btn */
+        border: 1px solid #d4d4d8;     /* zinc-300 */
+        background-color: #f4f4f5;     /* zinc-100 */
+        font-size: 0.875rem;           /* text-sm */
+        color: #18181b;                /* zinc-900 */
+        outline: none;
+        }
+
+        /* Focus */
+        #leadModal .hs-input:not([type="checkbox"]):not([type="radio"]):focus-visible {
+        border-color: #18181b;
+        box-shadow: 0 0 0 1px #18181b20;
+        }
+
+        /* Select: togli la freccia brutta del browser (opzionale) */
+        #leadModal select.hs-input {
+        appearance: none;
+        }
+
+        /* Checkbox / radio list */
+        #leadModal .hs-form-field .inputs-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.35rem 0 0;
+        }
+
+        #leadModal .hs-form-field .inputs-list li + li {
+        margin-top: 0.25rem;
+        }
+
+        #leadModal .hs-form-field .inputs-list label {
+        font-size: 0.75rem;
+        line-height: 1.3;
+        color:#b91c1c;
+        }
+
+        /* Testo privacy / legal */
+        #leadModal .legal-consent-container p, .hs-richtext {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        color: #52525b; /* zinc-600 */
+        padding: 0 0.5rem;
+        }
+
+        /* ========= VALIDAZIONE ========= */
+
+        :root {
+        /* colore globale errori HubSpot (nuovi form) */
+        --hsf-global-error__color: #b91c1c; /* red-700 */
+        }
+
+        /* Bordo rosso sui campi in errore */
+        #leadModal .hs-input.invalid,
+        #leadModal .hs-form-field.error .hs-input {
+        border-color: #b91c1c !important;
+        }
+
+        /* Messaggi di errore per singolo campo */
+        #leadModal .hs-error-msgs {
+        list-style: none;
+        margin: 0.25rem 0 0 !important;
+        padding: 0;
+        font-size: 0.75rem;
+        line-height: 1.3;
+        color: #b91c1c;
+        }
+
+        /* Alert globale (se HubSpot lo mostra) */
+        #leadModal .hs_error_rollup {
+        margin-bottom: 0.75rem;
+        font-size: 0.8rem;
+        color: #b91c1c;
+        }
+
+        /* ========= SUBMIT BUTTON ========= */
+
+        #leadModal .hs-submit {
+        margin-top: 0.75rem;
+        }
+
+        #leadModal .hs-submit input[type="submit"] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.65rem 1.6rem;
+        border-radius: 6px;
+        border: none;
+        font-weight: 500;
+        font-size: 0.875rem;
+        background-color: var(--green);   /* zinc-900 */
+        color: #f9fafb;              /* zinc-50 */
+        cursor: pointer;
+        transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+        }
+
+        #leadModal .hs-submit input[type="submit"]:hover {
+        filter: brightness(1.05);
+        transform: translateY(-1px);
+        }
+
+        #leadModal .hs-submit input[type="submit"]:active {
+        transform: translateY(0);
+        }
         
+        /* Modal: fai in modo che stia sempre nella viewport */
+        #leadModal .modal {
+        max-height: 100dvh; /* compatibile iOS */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2rem; /* spazio per evitare tagli */
+        }
+
+        /* Evita che il body scorra quando la modale Ã¨ aperta */
+        body.modal-open {
+        overflow: hidden;
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            background-color: var(--dark);
+            color: #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 0.8rem 1rem;
+        }
+
+        .modal-header .modal-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+
+        }
+        
+        .modal-header .btn-close {
+            filter: brightness(0) invert(1);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+
+
+
+
+                
